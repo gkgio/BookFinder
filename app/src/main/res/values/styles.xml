@@ -6,4 +6,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- ==================== ProgressBar ==================== -->
+
+    <style name="ProgressBarStyle">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressBarStyle.Circle">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

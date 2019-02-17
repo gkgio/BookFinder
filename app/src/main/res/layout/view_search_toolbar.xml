@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/grey"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/backContainer"
+        android:layout_width="@dimen/toolbarHeight"
+        android:layout_height="@dimen/toolbarHeight"
+        android:layout_gravity="top"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:hint="@string/search_edit_text"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/clearBtnContainer"
+        android:layout_width="@dimen/toolbarHeight"
+        android:layout_height="@dimen/toolbarHeight"
+        android:layout_gravity="top"
+        android:layout_marginEnd="22dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_close_or_delete"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+</LinearLayout>

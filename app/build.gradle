@@ -21,6 +21,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         vectorDrawables.useSupportLibrary = true
+
+        buildConfigField "String", "API_URL", "\"https://www.googleapis.com/books/v1/\""
     }
     buildTypes {
         debug {

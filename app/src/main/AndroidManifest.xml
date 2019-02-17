@@ -3,13 +3,14 @@
           package="com.gig.bookfinder">
 
     <application
+            android:name=".BookFinderApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".BookActivity">
+        <activity android:name=".presentetion.search.BookActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

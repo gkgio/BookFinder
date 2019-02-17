@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BookFinder</string>
+
+    <string name="server_connect_timeout">The time limit for the request exceeded</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="unexpected_error">Sorry, an unknown error occurred</string>
+
+    <string name="search_edit_text">Search..</string>
 </resources>
