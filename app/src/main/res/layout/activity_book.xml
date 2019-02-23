@@ -24,16 +24,17 @@
                     android:layout_height="wrap_content"
                     android:theme="@style/AppTheme.AppBarOverlay">
 
-                <ru.aton.finance.widgets.ToolbarSearch
+                <com.gig.bookfinder.presentetion.widgets.ToolbarSearch
                         android:id="@+id/toolbarSearch"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll|enterAlways"/>
 
             </android.support.design.widget.AppBarLayout>
 
 
             <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recycler"
+                    android:id="@+id/recyclerBooks"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"

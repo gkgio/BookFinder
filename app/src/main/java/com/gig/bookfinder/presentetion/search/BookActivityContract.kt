@@ -6,7 +6,7 @@ import com.gig.bookfinder.presentetion.base.BasePresenter
 interface BookActivityContract {
     interface Presenter : BasePresenter<BookActivityContract.MainView> {
         fun isDownloading(): Boolean
-        fun downloadBooks(searchRequest: String)
+        fun downloadBooks(searchRequest: String?)
         fun paginatingBooks(startIndex: String)
     }
 

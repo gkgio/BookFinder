@@ -3,7 +3,7 @@ package com.gig.bookfinder.data.errorhandler
 import android.content.res.Resources
 import android.support.annotation.IntDef
 import com.gig.bookfinder.R
-import com.gig.bookfinder.presentetion.di.ActivityScope
+import com.gig.bookfinder.di.ActivityScope
 
 
 import javax.inject.Inject

@@ -6,4 +6,8 @@
     <string name="unexpected_error">Sorry, an unknown error occurred</string>
 
     <string name="search_edit_text">Search..</string>
+    <string name="yes">Yes</string>
+
+    <string name="book_title_filter">Title: %1$s</string>
+    <string name="book_author_filter">Author: %1$s</string>
 </resources>

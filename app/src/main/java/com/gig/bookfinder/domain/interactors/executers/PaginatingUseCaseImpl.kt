@@ -1,14 +1,15 @@
 package com.gig.bookfinder.domain.interactors.executers
 
-import googlebooks.com.domain.interactors.PaginingUseCase
-import googlebooks.com.domain.repository.Repository
+import com.gig.bookfinder.domain.interactors.PaginatingUseCase
+import com.gig.bookfinder.domain.repository.BookRepository
 
-class PaginigUseCaseImpl(private val repository: Repository) : PaginingUseCase {
-    fun execute(startIndex: String) {
-        repository.pagining(startIndex)
+class PaginatingUseCaseImpl(private val repository: BookRepository) : PaginatingUseCase {
+
+    override fun execute(startIndex: String) {
+        repository.paginating(startIndex)
     }
 
-    fun setListener(listener: CallbackListener) {
-        repository.setPaginingListener(listener)
+    override fun setListener(listener: PaginatingUseCase.CallbackListener) {
+        repository.setPaginatingListener(listener)
     }
 }

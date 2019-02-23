@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.di
+package com.gig.bookfinder.di
 
 import javax.inject.Scope
 

@@ -22,7 +22,7 @@ android {
 
         vectorDrawables.useSupportLibrary = true
 
-        buildConfigField "String", "API_URL", "\"https://www.googleapis.com/books/v1/\""
+        buildConfigField "String", "API_URL", "\"https://www.googleapis.com/\""
     }
     buildTypes {
         debug {

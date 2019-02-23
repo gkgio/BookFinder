@@ -6,7 +6,7 @@ interface PaginatingUseCase {
 
     interface CallbackListener {
         fun addNewBooks(books: List<BookItem>)
-        fun showErrorPagginationBook(message: String)
+        fun showErrorPaginationBook(message: String)
     }
 
     fun execute(startIndex: String)

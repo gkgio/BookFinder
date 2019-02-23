@@ -31,8 +31,10 @@ class BookPresenter() :
         this.view = view
     }
 
-    override fun downloadBooks(searchRequest: String) {
-        useCase.execute(searchRequest)
+    override fun downloadBooks(searchRequest: String?) {
+        if (searchRequest != null) {
+            useCase.execute(searchRequest)
+        }
     }
 
     override fun paginatingBooks(startIndex: String) {
@@ -57,7 +59,7 @@ class BookPresenter() :
         view?.showError(message)
     }
 
-    override fun showErrorPagginationBook(message: String) {
+    override fun showErrorPaginationBook(message: String) {
         view?.showError(message)
     }
 

@@ -1,15 +1,16 @@
 package com.gig.bookfinder.domain.interactors.executers
 
-import googlebooks.com.domain.interactors.DownloadListOfBooksUseCase
-import googlebooks.com.domain.repository.Repository
+import com.gig.bookfinder.domain.interactors.DownloadListOfBooksUseCase
+import com.gig.bookfinder.domain.repository.BookRepository
 
-class DownloadListOfBooksUseCaseImpl(private val repository: Repository) : DownloadListOfBooksUseCase {
 
-    fun execute(searchRequest: String) {
+class DownloadListOfBooksUseCaseImpl(private val repository: BookRepository) : DownloadListOfBooksUseCase {
+
+    override fun execute(searchRequest: String) {
         repository.downloadBooks(searchRequest)
     }
 
-    fun setListener(listener: ResponseListener) {
+    override fun setListener(listener: DownloadListOfBooksUseCase.ResponseListener) {
         repository.setDownloadListListener(listener)
     }
 }

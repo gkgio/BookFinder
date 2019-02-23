@@ -2,7 +2,7 @@ package com.gig.bookfinder.data.errorhandler
 
 
 import com.gig.bookfinder.BuildConfig
-import com.gig.bookfinder.presentetion.di.ActivityScope
+import com.gig.bookfinder.di.ActivityScope
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.concurrent.TimeoutException

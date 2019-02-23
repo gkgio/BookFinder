@@ -1,6 +1,6 @@
 package com.gig.bookfinder.data.network
 
-import com.gig.bookfinder.presentetion.di.ActivityScope
+import com.gig.bookfinder.di.ActivityScope
 import com.gig.bookfinder.data.Config
 import com.gig.bookfinder.data.errorhandler.ErrorHandler
 import com.gig.bookfinder.domain.model.BooksResponse

@@ -18,7 +18,6 @@ class BookRepositoryImpl(private var service: IService) : BookRepository {
     private var cache: ArrayList<BookItem>? = null
     private var lastRequest: String? = null
 
-
     override fun setDownloadListListener(listener: DownloadListOfBooksUseCase.ResponseListener) {
         this.listListener = listener
     }
@@ -68,7 +67,7 @@ class BookRepositoryImpl(private var service: IService) : BookRepository {
                         pagListener?.addNewBooks(listBooks)
                     }
                 }) { throwable ->
-                    pagListener?.showErrorPagginationBook(throwable.message ?: "")
+                    pagListener?.showErrorPaginationBook(throwable.message ?: "")
                 }
         }
     }

@@ -1,6 +1,7 @@
-package com.gig.bookfinder.presentetion.di
+package com.gig.bookfinder.di
 
 import android.content.Context
+import android.content.res.Resources
 import com.gig.bookfinder.BookFinderApp
 import com.gig.bookfinder.BuildConfig
 import com.gig.bookfinder.data.network.IService
@@ -27,6 +28,10 @@ class AppModule(private val application: BookFinderApp) {
     @Provides
     @Singleton
     fun provideContext(): Context = application.applicationContext
+
+    @Provides
+    @ActivityScope
+    fun provideResources(): Resources = application.resources
 
     @Provides
     @ActivityScope
@@ -96,5 +101,4 @@ class AppModule(private val application: BookFinderApp) {
     ): BookActivityContract.Presenter {
         return BookPresenter(useCase, pagUseCase)
     }
-
 }

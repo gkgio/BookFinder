@@ -1,6 +1,6 @@
 package com.gig.bookfinder.data.errorhandler
 
-import com.gig.bookfinder.presentetion.di.ActivityScope
+import com.gig.bookfinder.di.ActivityScope
 import java.io.IOException
 
 import javax.inject.Inject

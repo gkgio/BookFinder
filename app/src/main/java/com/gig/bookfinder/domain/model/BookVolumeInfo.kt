@@ -3,7 +3,7 @@ package com.gig.bookfinder.domain.model
 import com.google.gson.annotations.SerializedName
 
 data class BookVolumeInfo(
-    @SerializedName("kind")
+    @SerializedName("title")
     val title: String? = null,
 
     @SerializedName("authors")

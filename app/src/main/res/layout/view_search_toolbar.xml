@@ -9,21 +9,9 @@
     android:focusable="true"
     android:orientation="horizontal">
 
-    <FrameLayout
-        android:id="@+id/backContainer"
+    <View
         android:layout_width="@dimen/toolbarHeight"
-        android:layout_height="@dimen/toolbarHeight"
-        android:layout_gravity="top"
-        android:background="?attr/selectableItemBackgroundBorderless">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_back"
-            tools:ignore="ContentDescription" />
-
-    </FrameLayout>
+        android:layout_height="@dimen/toolbarHeight"/>
 
     <EditText
         android:id="@+id/searchEditText"
@@ -34,7 +22,7 @@
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:hint="@string/search_edit_text"
-        android:inputType="number"
+        android:inputType="text"
         android:maxLines="1"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
