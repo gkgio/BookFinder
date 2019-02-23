@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.base
+package com.gig.bookfinder.presentation.base
 
 interface BasePresenter<V> {
     fun attachView(view: V)

@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.helpers
+package com.gig.bookfinder.presentation.helpers
 
 import android.app.Activity
 import android.content.ContentValues.TAG

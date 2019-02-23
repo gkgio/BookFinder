@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.widgets
+package com.gig.bookfinder.presentation.widgets
 
 import android.content.Context
 import android.util.AttributeSet

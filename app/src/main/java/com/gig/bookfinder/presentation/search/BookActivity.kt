@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.search
+package com.gig.bookfinder.presentation.search
 
 import android.content.DialogInterface
 import android.support.v7.app.AppCompatActivity
@@ -11,8 +11,8 @@ import android.widget.ProgressBar
 import com.gig.bookfinder.BookFinderApp
 import com.gig.bookfinder.R
 import com.gig.bookfinder.domain.model.BookItem
-import com.gig.bookfinder.presentetion.helpers.showErrorAlertDialog
-import com.gig.bookfinder.presentetion.widgets.ToolbarSearch
+import com.gig.bookfinder.presentation.helpers.showErrorAlertDialog
+import com.gig.bookfinder.presentation.widgets.ToolbarSearch
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.disposables.CompositeDisposable
 import java.util.concurrent.TimeUnit
@@ -20,8 +20,7 @@ import javax.inject.Inject
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
-import com.gig.bookfinder.presentetion.helpers.hideKeyboard
-import io.reactivex.android.schedulers.AndroidSchedulers
+import com.gig.bookfinder.presentation.helpers.hideKeyboard
 
 
 class BookActivity : AppCompatActivity(), BookActivityContract.MainView {

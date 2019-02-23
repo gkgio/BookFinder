@@ -1,7 +1,7 @@
-package com.gig.bookfinder.presentetion.search
+package com.gig.bookfinder.presentation.search
 
 import com.gig.bookfinder.domain.model.BookItem
-import com.gig.bookfinder.presentetion.base.BasePresenter
+import com.gig.bookfinder.presentation.base.BasePresenter
 
 interface BookActivityContract {
     interface Presenter : BasePresenter<BookActivityContract.MainView> {

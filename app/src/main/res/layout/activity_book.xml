@@ -20,7 +20,7 @@
                     android:layout_height="wrap_content"
                     android:theme="@style/AppTheme.AppBarOverlay">
 
-                <com.gig.bookfinder.presentetion.widgets.ToolbarSearch
+                <com.gig.bookfinder.presentation.widgets.ToolbarSearch
                         android:id="@+id/toolbarSearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

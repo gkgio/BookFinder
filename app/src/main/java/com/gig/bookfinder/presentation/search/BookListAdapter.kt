@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.search
+package com.gig.bookfinder.presentation.search
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

@@ -13,8 +13,8 @@ import com.gig.bookfinder.domain.interactors.PaginatingUseCase
 import com.gig.bookfinder.domain.interactors.executers.DownloadListOfBooksUseCaseImpl
 import com.gig.bookfinder.domain.interactors.executers.ErrorOrProgressUseCaseImpl
 import com.gig.bookfinder.domain.interactors.executers.PaginatingUseCaseImpl
-import com.gig.bookfinder.presentetion.search.BookActivityContract
-import com.gig.bookfinder.presentetion.search.BookPresenter
+import com.gig.bookfinder.presentation.search.BookActivityContract
+import com.gig.bookfinder.presentation.search.BookPresenter
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

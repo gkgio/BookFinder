@@ -1,4 +1,4 @@
-package com.gig.bookfinder.presentetion.search
+package com.gig.bookfinder.presentation.search
 
 import com.gig.bookfinder.domain.interactors.DownloadListOfBooksUseCase
 import com.gig.bookfinder.domain.interactors.ErrorOrProgressUseCase
