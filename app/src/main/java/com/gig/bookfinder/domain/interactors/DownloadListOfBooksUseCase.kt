@@ -7,7 +7,6 @@ interface DownloadListOfBooksUseCase {
 
     interface ResponseListener {
         fun showBooks(books: List<BookItem>)
-        fun showErrorDownloadBooks(message: String)
     }
 
     fun execute(searchRequest: String)

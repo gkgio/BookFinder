@@ -8,8 +8,10 @@ import com.gig.bookfinder.data.network.IService
 import com.gig.bookfinder.data.repository.BookRepositoryImpl
 import com.gig.bookfinder.domain.repository.BookRepository
 import com.gig.bookfinder.domain.interactors.DownloadListOfBooksUseCase
+import com.gig.bookfinder.domain.interactors.ErrorOrProgressUseCase
 import com.gig.bookfinder.domain.interactors.PaginatingUseCase
 import com.gig.bookfinder.domain.interactors.executers.DownloadListOfBooksUseCaseImpl
+import com.gig.bookfinder.domain.interactors.executers.ErrorOrProgressUseCaseImpl
 import com.gig.bookfinder.domain.interactors.executers.PaginatingUseCaseImpl
 import com.gig.bookfinder.presentetion.search.BookActivityContract
 import com.gig.bookfinder.presentetion.search.BookPresenter
@@ -93,12 +95,19 @@ class AppModule(private val application: BookFinderApp) {
         return PaginatingUseCaseImpl(repository)
     }
 
+    @Provides
+    @ActivityScope
+    internal fun provideErrorOrProgressUseCase(repository: BookRepository): ErrorOrProgressUseCase {
+        return ErrorOrProgressUseCaseImpl(repository)
+    }
+
     @ActivityScope
     @Provides
     fun provideBookSearchPresenter(
-        useCase: DownloadListOfBooksUseCase,
-        pagUseCase: PaginatingUseCase
+        downLoaduseCase: DownloadListOfBooksUseCase,
+        pagUseCase: PaginatingUseCase,
+        errorOrProgressUseCase: ErrorOrProgressUseCase
     ): BookActivityContract.Presenter {
-        return BookPresenter(useCase, pagUseCase)
+        return BookPresenter(downLoaduseCase, pagUseCase, errorOrProgressUseCase)
     }
 }

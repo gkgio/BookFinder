@@ -1,6 +1,7 @@
 package com.gig.bookfinder.domain.repository
 
 import com.gig.bookfinder.domain.interactors.DownloadListOfBooksUseCase
+import com.gig.bookfinder.domain.interactors.ErrorOrProgressUseCase
 import com.gig.bookfinder.domain.interactors.PaginatingUseCase
 
 interface BookRepository {
@@ -9,4 +10,6 @@ interface BookRepository {
 
     fun setPaginatingListener(listener: PaginatingUseCase.CallbackListener)
     fun paginating(startIndex: String)
+
+    fun setErrorOrProgressListener(listener: ErrorOrProgressUseCase.CallbackListener)
 }

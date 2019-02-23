@@ -3,21 +3,25 @@ package com.gig.bookfinder.presentetion.search
 import android.content.DialogInterface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.ProgressBar
 import com.gig.bookfinder.BookFinderApp
 import com.gig.bookfinder.R
 import com.gig.bookfinder.domain.model.BookItem
-import com.gig.bookfinder.presentetion.showErrorAlertDialog
+import com.gig.bookfinder.presentetion.helpers.showErrorAlertDialog
 import com.gig.bookfinder.presentetion.widgets.ToolbarSearch
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.disposables.CompositeDisposable
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import android.view.MotionEvent
+import android.view.View
 import android.widget.EditText
-import com.gig.bookfinder.presentetion.hideKeyboard
+import com.gig.bookfinder.presentetion.helpers.hideKeyboard
+import io.reactivex.android.schedulers.AndroidSchedulers
 
 
 class BookActivity : AppCompatActivity(), BookActivityContract.MainView {
@@ -31,9 +35,9 @@ class BookActivity : AppCompatActivity(), BookActivityContract.MainView {
 
     private var bookListAdapter: BookListAdapter? = null
 
-    lateinit var recyclerBooks: RecyclerView
-    lateinit var progressBar: ProgressBar
-    lateinit var toolbarSearch: ToolbarSearch
+    private lateinit var recyclerBooks: RecyclerView
+    private lateinit var progressBar: ProgressBar
+    private lateinit var toolbarSearch: ToolbarSearch
 
     private var lastQuery: String? = null
 
@@ -97,6 +101,13 @@ class BookActivity : AppCompatActivity(), BookActivityContract.MainView {
         bookListAdapter?.addBooksList(books)
     }
 
+    override fun setVisibilityProgress(isVisible: Boolean) {
+        val handler = Handler(Looper.getMainLooper())
+        handler.post {
+            progressBar.visibility = if (isVisible) View.VISIBLE else View.GONE
+        }
+    }
+
     override fun showError(message: String) {
         showErrorAlertDialog(
             this,
@@ -124,7 +135,8 @@ class BookActivity : AppCompatActivity(), BookActivityContract.MainView {
                 val y = event.rawY + focus.top - scrcoords[1]
 
                 if (event.action == MotionEvent.ACTION_UP && (x < focus.left || x >= focus.right
-                            || y < focus.top || y > focus.bottom)) {
+                            || y < focus.top || y > focus.bottom)
+                ) {
                     hideKeyboard()
                 }
             }

@@ -14,5 +14,6 @@ interface BookActivityContract {
         fun showBooks(books: List<BookItem>)
         fun addNewBooks(books: List<BookItem>)
         fun showError(message: String)
+        fun setVisibilityProgress(isVisible: Boolean)
     }
 }
